@@ -25,7 +25,7 @@ export async function  getStaticPaths(){
                meetupId:meetup._id.toString()
             }
         })),
-        fallback:false
+        fallback:'blocking'
     }
 }
 export async function getStaticProps(context) {
@@ -44,7 +44,7 @@ export async function getStaticProps(context) {
             image:selectedmeetup.image,
             address:selectedmeetup.address,
             description:selectedmeetup.description
-            
+
         },
     },
   };
